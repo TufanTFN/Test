@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System (Admin Login)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container" class="center-screen">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username (admin)" required>
+            <input type="password" id="password" placeholder="Password (1234)" required>
+            <button type="submit" id="login-btn">Log In</button>
+            <p id="login-message" style="color: red; margin-top: 10px;"></p>
+        </form>
+    </div>
+
+    <div id="app-container" class="container hidden">
+        <h1>Employee Management System</h1>
+
+        <form id="employee-form">
+            <h2>Add / Edit Employee</h2>
+            <input type="hidden" id="employee-id">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="number" id="salary" placeholder="Salary (USD)" required>
+            <button type="submit" id="submit-btn">Add Employee</button>
+        </form>
+
+        <h2>Current Employees</h2>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search by Name or Position...">
+            <button id="export-csv-btn">Export to CSV</button>
+            <button id="logout-btn" style="background-color: #f44336;">Logout</button>
+        </div>
+
+        <table id="employee-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employee-list">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
